@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-
-
 #playarea {
     display: flex;
     flex-direction: column;
@@ -13,6 +11,7 @@
     justify-content: center;
     min-height: 100vh; 
     background: #797979; 
+    text-align: center;
 }
 
 .row {
@@ -26,6 +25,8 @@
     box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
     position: relative;
     cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.5s; /* Adjust time as needed */
 }
 
 
@@ -35,17 +36,23 @@
     position: absolute;
     top: 0;
     left: 0;
-    border-radius: 10px; 
+    border-radius: 10px;
+    backface-visibility: hidden; /* Hide the back of the flipped content */
+    position: absolute;
 }
 
 .tile .front {
-    display: none; 
+    display: none;
+    transform: rotateY(180deg); /* Rotate the front image by 180 degrees */ 
 }
 
 .tile .back {
     display: block;
 }
 
+.tile.flipped {
+    transform: rotateY(180deg); /* Rotate the entire tile when flipped */
+}
 
 .tile.flipped .front {
     display: block;
@@ -60,4 +67,28 @@
         width: 80px;
         height: 120px;
     }
+}
+
+#resetButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #eae052;
+    color: rgb(0, 0, 0);
+}
+
+#resetButton:hover {
+    background-color: rgb(0, 186, 74);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  outline: 2px solid #000000;
+}
+
+#gameTitle {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2em;
+    color: #4CAF50;
 }

@@ -9,45 +9,54 @@
 </head>
 
 <body>
+
+    
+
     <section id="playarea">
 
+        <h1 id="rules">Match the cards!</h1>
+
+        <div id="turnCounter">Turns: 0</div>
+
         <div class="row" id="top-row">
-            <div class="tile" id="top-tile1">
+            <div class="tile" data-framework="diamond" id="top-tile1">
                 <img src="Pictures/Diamond.jpg" alt="Card face diamond" class="front">
                 <img src="Pictures/cardBack.jpg" alt="Back of card" class="back">
             </div>
-            <div class="tile" id="top-tile2">
+            <div class="tile" data-framework="heart" id="top-tile2">
                 <img src="Pictures/Heart.jpg" alt="Card face heart" class="front">
                 <img src="Pictures/cardBack.jpg" alt="Back of card" class="back">
             </div>
-            <div class="tile" id="top-tile3">
+            <div class="tile" data-framework="money" id="top-tile3">
                 <img src="Pictures/Money.jpg" alt="Card face money sign" class="front">
                 <img src="Pictures/cardBack.jpg" alt="Back of card" class="back">
             </div>
-            <div class="tile" id="top-tile4">
+            <div class="tile" data-framework="spade" id="top-tile4">
                 <img src="Pictures/Spade.jpg" alt="Card face spade" class="front">
                 <img src="Pictures/cardBack.jpg" alt="Back of card" class="back">
             </div>
         </div>
 
         <div class="row" id="bottom-row">
-            <div class="tile" id="bottom-tile1">
+            <div class="tile" data-framework="diamond" id="bottom-tile1">
                 <img src="Pictures/Diamond.jpg" alt="Card face diamond" class="front">
                 <img src="Pictures/cardBack.jpg" alt="Back of card" class="back">
             </div>
-            <div class="tile" id="bottom-tile2">
+            <div class="tile" data-framework="heart" id="bottom-tile2">
                 <img src="Pictures/Heart.jpg" alt="Card face heart" class="front">
                 <img src="Pictures/cardBack.jpg" alt="Back of card" class="back">
             </div>
-            <div class="tile" id="bottom-tile3">
+            <div class="tile" data-framework="money" id="bottom-tile3">
                 <img src="Pictures/Money.jpg" alt="Card face money sign" class="front">
                 <img src="Pictures/cardBack.jpg" alt="Back of card" class="back">
             </div>
-            <div class="tile" id="bottom-tile4">
+            <div class="tile" data-framework="spade" id="bottom-tile4">
                 <img src="Pictures/Spade.jpg" alt="Card face spade" class="front">
                 <img src="Pictures/cardBack.jpg" alt="Back of card" class="back">
             </div>
         </div>
+
+        <button id="resetButton">Reset</button>
 
     </section>
 
